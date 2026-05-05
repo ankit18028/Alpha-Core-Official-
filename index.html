@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Alpha Core Esports - Free Fire Tournament</title>
+<meta name="description" content="Join Alpha Core Esports Discord server for tournaments and scrims">
+<meta name="keywords" content="esports, free fire, tournament, discord server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Core eSports | Free Fire Scrims</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-neon: #00d4ff;
+            --secondary-neon: #005f73;
+            --bg-dark: #0a0b0d;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #e0e0e0;
+            --glow: 0 0 15px rgba(0, 212, 255, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 11, 13, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-neon);
+            text-shadow: var(--glow);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10,11,13,0.8), rgba(10,11,13,0.8)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+.hero-logo {
+    width: 70px;
+    display: block;
+    margin: 0 auto 30px auto;  /* 👈 yeh value badhao */
+}
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 20px var(--primary-neon);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--primary-neon);
+            font-weight: 500;
+        }
+
+        .btn-neon {
+            padding: 15px 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: var(--primary-neon);
+            background: transparent;
+            border: 2px solid var(--primary-neon);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--glow), inset var(--glow);
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .btn-neon:hover {
+            background: var(--primary-neon);
+            color: #000;
+            box-shadow: 0 0 40px var(--primary-neon);
+        }
+
+        /* --- Common Section Styles --- */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .section-title span {
+            color: var(--primary-neon);
+        }
+
+        /* --- About Section --- */
+        .about {
+            background: rgba(255, 255, 255, 0.02);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        /* --- Features Grid --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, border 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-neon);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary-neon);
+            margin-bottom: 20px;
+        }
+
+        /* --- Management Team --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .team-member {
+            background: linear-gradient(145deg, #16181d, #0a0b0d);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-neon);
+        }
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            color: var(--primary-neon);
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            color: #888;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* --- Join Section --- */
+        .join-cta {
+            text-align: center;
+            background: linear-gradient(transparent, var(--secondary-neon), transparent);
+            padding: 150px 10%;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            section { padding: 60px 5%; }
+        }
+            /* Instagram Color */
+        .insta-btn { border-color: #E1306C; color: #E1306C; }
+        .insta-btn:hover { background: #E1306C; color: #fff; box-shadow: 0 0 20px #E1306C; }
+        
+/* YouTube Color */
+.yt-btn { border-color: #FF0000; color: #FF0000; }
+.yt-btn:hover { background: #FF0000; color: #fff; box-shadow: 0 0 20px #FF0000; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ALPHA CORE</div>
+        <a href="https://discord.com/invite/alpha-core-esports-1447857262369574954" class="btn-neon" style="padding: 8px 20px; font-size: 0.8rem;">Join Now</a>
+    </nav>
+
+    <section 
+<img src="https://cdn.discordapp.com/attachments/1501073307670282300/1501266135759454288/IMG_20260505_222452.png?ex=69fb728a&is=69fa210a&hm=9888cee1bec75b60671e3c6baa2732714383fb69f1b96abc46a7fd09a1bd3e89" class="hero-logo">
+        <h1>Alpha Core eSports</h1>
+        <p>Free Fire Scrims & Tournaments</p> <BR>
+        <a href="https://discord.com/invite/alpha-core-esports-1447857262369574954" class="btn-neon">Join Discord</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About <span>Us</span></h2>
+        <div class="about-content">
+            <p>We are a trusted Free Fire India eSports community dedicated to providing the ultimate competitive platform. Whether you are a rising star or a seasoned pro, Alpha Core offers high-quality scrims, massive prize pool tournaments, and professional live streaming coverage. 5 successful Tournament completed ,show your gameplay and win grand prize with your high performance gameplay,Join to compete, improve your skills, and experience a professional gaming environment.</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2 class="section-title">Why <span>Choose Us</span></h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Daily Scrims</h3>
+                <p>High-tier practice matches every single day to sharpen your skills.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Big Prize Pools</h3>
+                <p>Compete in organized tournaments with rewarding cash prizes.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Fair Gameplay</h3>
+                <p>Strict anti-cheat monitoring and professional management.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Active Community</h3>
+                <p>Meet and compete with thousands of dedicated Free Fire players.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">The <span>Core</span> Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>Alpha Ravi</h3>
+                <p>Owner</p>
+            </div>
+            <div class="team-member">
+                <h3>Alpha Aman</h3>
+                <p>Manager</p>
+            </div>
+            <div class="team-member">
+                <h3>Ankit Thakur</h3>
+                <p>Head Admin / DC Manager</p>
+            </div>
+            <div class="team-member">
+                <h3>Rito</h3>
+                <p>Production Head</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-cta">
+        <h2 class="section-title">Ready to <span>Dominate?</span></h2>
+        <p style="margin-bottom: 40px;">Step into the arena and prove your worth.</p>
+        <a href="https://discord.com/invite/alpha-core-esports-1447857262369574954"" class="btn-neon"><i class="fab fa-discord"></i> Connect to Discord</a>
+        <br>
+        <br>
+        <br>
+          <a href="https://www.instagram.com/alpha_ffevents" class="btn-neon">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <br>
+            <br>
+            <br>
+          <a href="https://youtube.com/@alphacorexesp?si=FpF6xeX7w73xSTwO" class="btn-neon">
+    <i class="fab fa-youtube"></i> YouTube
+</a>
+
+    </section>
+    <footer>
+        &copy; 2024 Alpha Core eSports. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Simple scroll animation trigger
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => {
+                const top = window.scrollY;
+                const offset = sec.offsetTop - 150;
+                const height = sec.offsetHeight;
+                if (top >= offset && top < offset + height) {
+                    sec.style.transition = 'opacity 0.6s ease-in';
+                    sec.style.opacity = '1';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
